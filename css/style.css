@@ -365,18 +365,18 @@ header {
     }
 
     #category { width: auto; }
-    #category { font-size: 14px; }
-    #category .caption-mid { font-size: 24px; }
+    #category { font-size: 12px; }
+    #category .caption-mid { font-size: 18px; }
 
     .category-item {
         padding: 5px;
         width: 80%;
-        height: 140px;
+        height: 110px;
     }
 
     .item-icon {
-        width: 120px;
-        height: 120px;
-        background-size: 120px 120px;
+        width: 100px;
+        height: 100px;
+        background-size: 100px 100px;
     }
 }
