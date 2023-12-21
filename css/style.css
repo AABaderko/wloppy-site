@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/** Colors
+Main color: #FFFFFF (white)
+Secondary color: #D8D8D8
+Third color: #BABABA
+
+Main green: #1AD14D
+Second green: #25B45E
+Third green: #1FA144
+
+Main text color: #000000 (black)
+Secondary text color: #FFFFFF (white)
+**/
+
+* { margin: 0; }
+
+body {
+    color: black;
+}
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("img/wloppy-default.svg") url("img/wloppy-blink.svg") url("img/wloppy-mouth-open.svg");
+}
+
+#logo-wloopy {
+    padding: 10px 5px;
+
+    height: 70px;
+    width: 258px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+
+    background: linear-gradient(135deg, #25B45E 0%, #25B45E 15%, #31D874 30%, #2CAC60 75%, #208A4B 100%);
+    border-radius: 20px;
+}
+
+#wloppy {
+    width: 127px;
+    height: 68px;
+    background-image: url("img/wloppy-default.svg");
+    background-size: 127px 68px;
+    animation: wloppy-blinking 5s linear normal infinite;
+}
+
+#wloppy:hover {
+    animation: wloppy-m-open 1s linear normal infinite;
+}
+
+@keyframes wloppy-blinking {
+    0% { background-image: url("img/wloppy-default.svg"); }
+    49.9% { background-image: url("img/wloppy-default.svg"); }
+    50% { background-image: url("img/wloppy-blink.svg"); }
+    53% { background-image: url("img/wloppy-blink.svg"); }
+    53.1% { background-image: url("img/wloppy-default.svg"); }
+    100% { background-image: url("img/wloppy-default.svg"); }
+}
+
+@keyframes wloppy-m-open {
+    from { background-image: url("img/wloppy-mouth-open.svg"); }
+    to { background-image: url("img/wloppy-mouth-open.svg"); }
+}
+
+#logo-text {
+    padding-left: 2px;
+    bottom: 4px;
+    right: 12px;
+    position: absolute;
+}
+
+#nav {
+    margin-right: 40px;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    list-style-type: none;
+}
+
+#nav li {
+    padding: 15px 20px;
+    float: left;
+}
+
+.caption-small {
+    font-family: 'Oswald';
+    font-size: 40px;
+}
+
+.caption-mid {
+    font-family: 'Oswald';
+    font-size: 64px;
+}
+
+.white { color: white; }
+
+header {
+    padding: 20px 25px;
+    height: 110px;
+    position: relative;
+
+    background: linear-gradient(180deg, #D8D8D8 0%, #E2E2E2 20%, #D8D8D8 60%, #EDEAEA 90%, #BABABA 100%);
+    border-bottom: #BABABA solid 4px;
+}
