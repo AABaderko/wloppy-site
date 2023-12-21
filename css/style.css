@@ -135,6 +135,7 @@ body::after {
 header {
     padding: 20px 25px;
     height: 110px;
+    width: auto;
     position: relative;
 
     background: linear-gradient(180deg, #D8D8D8 0%, #E2E2E2 20%, #D8D8D8 60%, #EDEAEA 90%, #BABABA 100%);
@@ -292,8 +293,9 @@ header {
     }
 
     #logo-text { display: none; }
+    #nav { margin-right: 10px; }
 
-    .caption-small { font-size: 30px; }
+    .caption-small { font-size: 25px; }
     .caption-mid { font-size: 40px; }
 
     header { height: 130px; }
@@ -306,7 +308,7 @@ header {
         top: auto;
         transform: translateY(0);
     }
-    #info { width: auto; height: auto; }
+    #info { width: 100%; height: auto; }
     #info * { 
         float: none;
         margin-left: auto;
@@ -314,9 +316,11 @@ header {
     }
 
     #category { width: auto; }
+    #category { font-size: 20px; }
+    #category .caption-mid { font-size: 26px; }
     .category-item {
         max-width: 700px;
         width: 80%;
-        min-width: 500px;
+        min-width: 400px;
     }
 }
