@@ -22,6 +22,13 @@ body {
     font-size: 30px;
 }
 
+h1, h2, h3 { font-weight: normal; }
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
 .white { color: white; }
 
 body::after {
@@ -42,10 +49,10 @@ body::after {
 /** HEADER **/
 
 #logo-wloopy {
-    padding: 10px 5px;
+    padding: 10px 8px;
 
     height: 70px;
-    width: 258px;
+    width: 250px;
 
     position: absolute;
     top: 50%;
@@ -84,14 +91,14 @@ body::after {
 
 #logo-text {
     padding-left: 2px;
-    bottom: 4px;
-    right: 12px;
+    bottom: 8px;
+    right: 24px;
     position: absolute;
 }
 
 
 
-#nav {
+#header-nav {
     margin-right: 40px;
 
     position: absolute;
@@ -104,48 +111,85 @@ body::after {
 
 
 
-#nav li {
+#header-nav li {
     padding: 15px 20px;
     float: left;
 }
 
-#nav li a {
-    color: black;
+#header-nav li a {
     text-decoration: none;
     transition: 0.16s ease-in;
 }
-#nav li a:hover { 
+#header-nav li a:hover { 
     color: #25B45E;
     text-shadow: 0px 0px 2px #1AD14D;
 }
 
+#header-nav li a.button {
+    padding: 10px 20px;
+    background: linear-gradient(180deg, #2AE45E 8%, #1AD14D 60%, #18CE4B 85%, #17AB40 100%);
+    border-radius: 15px;
+    color: white;
+}
+#header-nav li a.button:hover {
+    box-shadow: 0px 0px 5px #1AD14D;
+    color: white;
+}
 
-.caption-small {
+
+h3, .caption-small {
     font-family: 'Oswald';
     font-size: 40px;
 }
 
-.caption-mid {
+h2, .caption-mid {
     font-family: 'Oswald';
-    font-size: 64px;
+    font-weight: 600;
+    font-size: 54px;
 }
 
+h1, .caption-large {
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: 78px;
+}
+
+.center {
+    text-align: center;
+}
 
 
 header {
     padding: 20px 25px;
     height: 110px;
-    width: device-width;
     position: relative;
 
     background: linear-gradient(180deg, #D8D8D8 0%, #E2E2E2 20%, #D8D8D8 60%, #EDEAEA 90%, #BABABA 100%);
     border-bottom: #BABABA solid 4px;
 }
 
+/** NAVIGATION **/
+nav {
+    margin-top: 0;
+    padding: 30px;
+    width: 350px;
+    height: 800px;
+    float: left;
 
-
+    background: linear-gradient(-90deg, #D1D1D1 0%, #D3D2D2 20%, #CACACA 40%, #D8D8D8 70%, #D9D4D4 85%, #BABABA 100%);
+    border: 8px solid #BABABA;
+    border-top: none;
+    border-left: none;
+    border-bottom-right-radius: 50px;
+}
 
 /** MAIN **/
+
+.nav-list {
+    min-height: 800px;
+    padding-top: 0;
+    margin-top: 0;
+}
 
 .container {
     min-width: 800px;
@@ -161,8 +205,6 @@ header {
 
 
 #info {
-    /**margin-top: 170px;
-    margin-bottom: 170px;**/
     margin-top: 10%;
     margin-bottom: 10%;
     width: 950px;
@@ -173,6 +215,7 @@ header {
 #info * { 
     margin: 10px 20px;
 }
+
 
 .backpanel {
     padding: 15px;
@@ -186,6 +229,26 @@ header {
     border: #BABABA solid 8px;
 }
 
+.cont-nav {
+    margin-left: 416px;
+    padding-top: 16px;
+    max-width: none;
+}
+
+.backplate {
+    margin: 0 auto 16px;
+    padding: 15px;
+    width: 90%;
+    max-width: 1000px;
+    height: 1200px;
+    
+    border-radius: 30px;
+    background: linear-gradient(135deg, #D8D8D8 8%, #F1F1F1 24%, #D8D8D8 65%, #D8D8D8 80%, #C5C5C5 90%, #BABABA 100%);
+    border: #BABABA solid 8px;
+}
+
+
+
 #wloppy-present {
     width: 450px;
 
@@ -196,6 +259,7 @@ header {
 
 
 #category {
+    margin-bottom: 120px;
     width: 840px;
 }
 
@@ -209,13 +273,14 @@ header {
     background-repeat: no-repeat;
     background-color: #A1A1A1;
     background-position-x: 40px;
-    border: #8F8F8F solid 15px;
+    border: #747474 solid 15px;
+    border-radius: 30px;
 
     transition: 0.2s ease-in-out;
 }
 
 .category-item:hover {
-    border-color: #8F8F8F;
+    border-color: #5F5F5F;
     box-shadow: 0px 0px 15px #A1A1A1;
 }
 
@@ -241,13 +306,13 @@ header {
     background-repeat: no-repeat;
     background-color: #ECD615;
     background-position-x: 40px;
-    border: #D3C015 solid 15px;
+    border: #CDB11B solid 15px;
 
     transition: 0.2s ease-in-out;
 }
 
 .category-item.process:hover {
-    border-color: #CDB11B;
+    border-color: #AD9717;
     box-shadow: 0px 0px 15px #ECD615;
 }
 
@@ -279,32 +344,66 @@ header {
     background-image: url("img/logo-1C-inverted.svg");
 }
 
+.Blender-Logo { background-image: url("img/logo-blender.svg"); }
+
+.Unknown-Logo { background-image: url("img/logo-unknown.svg"); }
+
+
+footer {
+    padding: 20px;
+    height: 250px;
+    position: relative;
+    background: linear-gradient(180deg, #EDEAEA 0%, #DDDADA 20%, #DFDFDF 50%, #D8D8D8 80%, #BABABA 100%);
+    border-top: 5px solid #EFEFEF;
+}
+
+#contact { 
+    float: left;
+    list-style-type: none;
+}
+#contact li { padding-bottom: 5px; }
+
+#utils { float: right; }
+#utils * { margin: 0 auto; }
+
+#utils-icons { width: 225px; }
+#utils-icons * { width: 100px; }
+
+#copyright {
+    width: 95%;
+    bottom: 30px;
+    position: absolute;
+    text-align: center;
+}
+
 @media screen and (max-width: 950px) {
     body {
         font-size: 24px;
     }
 
     #logo-wloopy {
-        width: 200px;
-        height: 100px;
+        padding: 6px;
+        width: 215px;
+        height: 60px;
     }
     #wloppy {
-        width: 200px;
-        height: 100px;
-        background-size: 200px 100px;
+        width: 120px;
+        height: 60px;
+        background-size: 120px 60px;
     }
 
-    #logo-text { display: none; }
+    #logo-text { bottom: 10px; }
+
+    /**logo-text { display: none; }**/
     #nav { margin-right: 10px; }
 
-    .caption-small { font-size: 25px; }
-    .caption-mid { font-size: 40px; }
+    h3, .caption-small { font-size: 35px; }
+    h2, .caption-mid { font-size: 40px; }
+    h1, .caption-large { font-size: 50px; }
 
-    header { height: 130px; }
+    header { height: 80px; }
 
-    .container { 
-        min-width: 0;
-    }
+    .container { min-width: 0; }
     #wloppy-present { 
         position: relative;
         top: auto;
@@ -319,16 +418,27 @@ header {
 
     #category { width: auto; }
     #category { font-size: 20px; }
-    #category .caption-mid { font-size: 26px; }
+    #category h2 { font-size: 26px; }
     .category-item {
         max-width: 700px;
         width: 80%;
+        border-radius: 24px;
+    }
+
+    footer {
+        height: 340px;
+    }
+
+    #contact, #utils {
+        margin: 0 auto;
+        width: auto; 
+        float: none;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     body {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     #logo-wloopy {
@@ -345,33 +455,29 @@ header {
     #nav { margin-right: 10px; }
     #nav li { padding: 12px; }
 
-    .caption-small { font-size: 20px; }
-    .caption-mid { font-size: 25px; }
+    h3, .caption-small { font-size: 20px; }
+    h2, .caption-mid { font-size: 25px; }
+    h1, .caption-large { font-size: 30px; }
 
     header { height: 60px; }
 
-    .container { 
-        min-width: 0;
-    }
-    #wloppy-present { 
-        position: relative;
-        width: 75%;
-        top: auto;
-        transform: translateY(0);
-    }
+    nav { float: none; }
+
+    #wloppy-present { width: 75%; }
     .backpanel { 
         width: 80%;
         height: 225px;
     }
 
-    #category { width: auto; }
     #category { font-size: 12px; }
-    #category .caption-mid { font-size: 18px; }
+    #category h2 { font-size: 14px; }
 
     .category-item {
         padding: 5px;
+        margin: 15px auto;
         width: 80%;
-        height: 110px;
+        height: 120px;
+        border-radius: 16px;
     }
 
     .item-icon {
@@ -379,4 +485,9 @@ header {
         height: 100px;
         background-size: 100px 100px;
     }
+
+    footer { height: 210px; }
+
+    #utils-icons { width: 130px; }
+    #utils-icons * { width: 60px; }
 }
