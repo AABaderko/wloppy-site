@@ -454,6 +454,7 @@ footer {
     }
 
     #logo-text { bottom: 10px; }
+    #header-nav { margin-right: 10px; }
 
     #nav { margin-right: 10px; }
 
@@ -530,12 +531,14 @@ footer {
     }
 
     #logo-text { display: none; }
-    #nav { margin-right: 10px; }
-    #nav li { padding: 12px; }
+    #header-nav { margin-right: 10px; }
+    #header-nav li { padding: 12px; }
 
     h3, .caption-small { font-size: 20px; }
     h2, .caption-mid { font-size: 25px; }
     h1, .caption-large { font-size: 30px; }
+
+    .item-container.text-scale-down * { font-size: 18px; }
 
     p { text-indent: 20px; }
 
@@ -575,6 +578,7 @@ footer {
 
     nav {
         margin-right: 0;
+        min-width: 0;
         width: auto;
         min-height: 50px;
         border-right: none;
