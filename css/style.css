@@ -161,8 +161,6 @@ h1, .caption-large {
 
 .center { text-align: center; }
 
-.display-list li { display: list-item; }
-
 header {
     padding: 20px 25px;
     height: 110px;
@@ -240,6 +238,7 @@ main {
 .backplate b, .backplate i, .backplate u { display: inline-block; }
 .backplate h1, .backplate h2, .backplate h3 { display: block; }
 .backplate .display-list { display: block; }
+.display-list li { display: list-item; }
 
 .backplate .img-center {
     margin: 0 auto;
